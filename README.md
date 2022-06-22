@@ -14,8 +14,14 @@
   
 예시 1
 
+ [how to Handle multiple checkbox components in React](https://codemasterkimc.tistory.com/459 "리액트에서 여러 체크박스들을 하나의 컴포넌트로 재활용 해보기 ts") 
+ 
+예시 2
+
+ []( "") 
+ 
   
- [name](url "hoverName") 
+  
   
 ```
 link
