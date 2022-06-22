@@ -1,5 +1,6 @@
 import { NextPage } from "next"
 import { useState } from "react"
+import CheckboxList from "../../../components/learn22/CheckboxList"
 
 const myFoodList = [
     '김치',
@@ -16,27 +17,19 @@ const myFoodList = [
 
 const MyCheckList: NextPage = () => {
 
-    const [foods, setFoods] = useState<string[]>([])
+    const [checkedFoods, setCheckedFoods] = useState<string[]>([])
 
-    const onMyFoodChecked = (selected : string[]) => {
-        setFoods(selected)
-        console.log(selected)
+    const onMyFoodChecked = (checked : string[]) => {
+        setCheckedFoods(checked)
+        console.log(checked)
     }
 
     return(
-    <ol>{myFoodList.map((food, idx)=>
-        <li key={food + '-' + idx}>
-            <input type='checkbox' checked={foods?.includes(food)}onChange={(e)=>{
-                if(e.target.checked){
-                    onMyFoodChecked([...foods!, food])
-                } else{
-                    onMyFoodChecked(foods.filter((_food)=> _food !== food));
-                }
-            }}/>
-            <span>{food}</span>
-        </li>
-    )}
-    </ol>
+        <CheckboxList
+            checkedFoods ={checkedFoods}
+            onCheck = {onMyFoodChecked}
+            foods = {myFoodList}
+        />
     )
 }
 
