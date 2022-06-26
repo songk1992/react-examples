@@ -1,0 +1,74 @@
+.myTable {
+  width: 600px;
+  height: 800px;
+  margin: 30px auto 0;
+}
+
+.myTable .myTableContainer {
+  width: 100%;
+  height: 450px;
+  overflow: auto;
+}
+
+.myTable .myTableContainer::-webkit-scrollbar {
+  width: 10px;
+}
+.myTable .myTableContainer::-webkit-scrollbar-thumb {
+  background-color: #202631;
+  border-radius: 5px;
+}
+.myTable .myTableContainer::-webkit-scrollbar-track {
+  background-color: grey;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 7px white;
+}
+
+.myTable table {
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+}
+
+.myTable table thead,
+.myTable table tbody {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.myTable table thead tr th {
+  font-weight: 500;
+  text-align: left;
+  background-color: #fafafa;
+  display: table-cell;
+  vertical-align: inherit;
+  padding: 8px;
+  overflow-wrap: break-word;
+}
+
+.myTable table thead tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.myTable table tbody tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.myTable table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.myTable table tbody tr td {
+  padding: 8px;
+  overflow-wrap: break-word;
+  display: table-cell;
+  vertical-align: inherit;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
